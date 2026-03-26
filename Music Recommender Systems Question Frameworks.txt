@@ -1,0 +1,84 @@
+Evaluation of Models as Music Recommender Systems:
+
+I would like to listen to some songs like ______. Can you recommend some songs in the same genre?
+
+I would like to listen to some songs about __________ (subject matter of song), can you recommend some songs like this?
+
+I enjoy __________ (artist or song). Can you recommend other artists/songs that I might like?
+
+I enjoy __________ (artist or song) and ___________ (artist or song). Can you recommend other artists/songs that I might like?
+
+I like __________ and _____________ (artists). Do you know any songs that feature both of these artists?
+
+I enjoy music by ____________ (artist). Can you recommend some songs by artists from around the same time/in the same music scene?
+
+What song has the lyrics _________ in?
+
+What other song/artist sampled __________?
+
+
+Maybe something like:
+
+Research question 1 - How well can LLMs predict the genre of a piece of music or a song when prompted, and how does a model's performance  scale with the song's popularity?
+
+Research question 2 - How well can LLMs suggest suitable music recommendations for the user when given examples of tracks that the user enjoys, and how correlated are the model's suggestions with factors such as time period/era, genre, collaborations etc?
+
+Research Question 3 - How do different prompting methodologies affect the ability of LLMs to appropriately respond to the user in terms of genre prediction and recommendation tasks?
+
+Research Question 4
+
+Focus on music in the context of the mass media and how it is interpreted/consumed, rather than music theory. I will leave further research in LLM understanding of music theory to people with a greater understanding of this domain than I possess.
+
+For prompt generation, given the unpredictable nature of LLMs and the difficulty in generating a prompt that will be best for extracting the knowledge held within the parameters of the model, the models will be tested using various prompting methodologies. I opted for the prompt generation process created by Jiang et al. While this method leads to improved performance of the LLMs in the study, this still represents a lower bound for the knowledge of the models, as the sample space of possible prompts remains unexhausted. We will also give some examples to make the model evaluations few-shot, given that we are looking to maximise the knowledge extraction from these models, and given that this will remain unexhaustive and represent a lower bound regardless.
+
+Recommendation tasks - This is important work because we already have recommendation systems, and we already have LLMs, but there is not much research into the domain specific knowledge of LLMs in music, and conversational recommendation systems are likely to be something that large music companies like Spotify will look to implement. My project will entail compiling a dataset appropriate for evaluating the performance of open-source LLMs in the specific music recommendation tasks of playlist continuation, next-song prediction, playlist generation etc. Exploring the results may help us to better understand the factors that result in a better or worse performance on particular tasks, and develop a benchmark for LLM performance in music recommendation. A range of prompting methodologies will also be used and results will compare and outline the most effective strategies for each task. I may look to utilise the Langchain or Langsmith framework for this, if it appears that it would facilitate the evaluation process.
+
+Zhang et al stated that even state of the art models like GPT-4 have limited knowledge of music metadata,  and this will particularly be the case where there is less data available (which is the case for more obscure artists/songs.) Rather than exploration of how much music metadata is stored in the parameters of LLMs, this paper will instead focus on conversational recommendation tasks, so the models will not be tested based on the depth of their music knowledge in terms of obscurity, but rather with a focus on the contextual/content-based understanding of music and how people choose to listen to it. I will focus on tasks that I believe will be most prevalently utilised in the context of a conversational recommendation system, highlighting the performance of the LLM models in these tasks, rather than some of the more context-rich tasks that non-conversational recommendation systems are better suited for. For example, a non-conversational recommendation system may have access to entire user playlists, listening histories, user location, current date/time in that location etc. I will work on the assumption that a conversational recommendation agent does not have access to this data, and relies on the context provided within the prompt by the user.
+
+Contextual recommendation - Cultural context, emotional state etc.
+
+Given that a common way users may interact with LLM-based recommender systems will presumably be to describe how they are feeling, and to ask for a model to recommend a song based on their current emotion, one of the tasks will be for the user to request a song (or a playlist of songs) that suits their mood. Two tasks can be assessed here, emotion-based playlist generation, and another on emotion-based single-song recommendation. Data from the #nowplayingrs dataset, and the sentiment values attached to songs, can be extracted for ground-truth values for evaluating LLM recommendations here. If this is not feasible, perhaps data from hashtags can be extracted elsewhere (have a look at the other datasets suggested.)
+
+Content-based recommendation - Lyrics, Key, BPM, genre, tone etc.
+
+Another practical way that I would anticipate conversational recommendation systems being used is for asking for songs about a particular theme, or with a particular subject matter. Another task can therefore deal with LLM ability to suggest songs about the requested topic. Lyrics and lyric interpretation data from Genius can be leveraged for this part of the evaluation to determine whether the model recommendations are appropriate.
+
+(Another possible task could relate to whether a model can effectively recommend a song based on a requested musical feature, for example, a song in a particular key, with a particular BPM, in a particular genre etc.)
+
+Context and content-based recommendation:
+
+Another task will be next song recommendation based on current song being listened to (this is kind of content and context based). To extend this task, I may also test for recommendations on the last three songs that have been listened to. Ground truth for this will be trickier, perhaps an analysis of whether it matches with tags of genre, lyrics/theme, BPM, key, mode etc. If it matches with a certain number of these things, perhaps we can say that it is a good recommendation. This part needs some work.
+
+Possible Evaluation Metrics:
+
+Precision and Recall: Evaluate the accuracy of the recommended songs. Precision measures the proportion of recommended songs that are relevant, while recall measures the proportion of relevant songs that were recommended.
+
+NDCG (Normalized Discounted Cumulative Gain): Measures the ranking quality of the recommended list, giving higher scores for relevant songs appearing earlier in the list.
+
+Hit Rate: Measures the proportion of times a recommended song appears in the user's actual listening history.
+
+MRR (Mean Reciprocal Rank): Evaluates the rank position of the first relevant item in the recommended list.
+
+Coverage: Measures the diversity of the recommendations by checking how many unique songs or artists are recommended.
+
+
+Prompting of models:
+
+What will the system instructions be for each task, and how will I generate prompts? Can I use the methodology developed by Jiang et al. and how do I implement this, can I do it in Langchain?
+
+
+Fine tuning the models to assess fine-tuned performance?:
+
+Should I do this or should I simply be testing the baseline open-source models?
+
+Current outstanding questions -
+
+1. What data features precisely will I actually need in my dataset? Where can I obtain them from? Will I have to make two datasets, one full of prompts and the other for checking correctness of LLM responses for ground-truth?
+
+2. Should I use Langchain or Langsmith as a framework for the evaluation? Do these frameworks support the different evaluation metrics?
+
+3. How will I decide what is a 'good' recommendation and a 'bad' recommendation, particularly in relation to the next song in a sequence recommendation task?
+
+4. Should I be fine-tuning the models and then assessing their performance again or just testing the baseline open-source models and leaving the testing of fine-tuned models for further research?
+
+5. How clearly do I need to describe the methodology and what metrics will be measured etc in my specification? Do I need to know exactly what metrics I'll be testing for with each prompt in each task and describe that? Do I need to describe exactly what the prompting methodology will consist of?

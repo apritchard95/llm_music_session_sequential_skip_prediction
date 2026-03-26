@@ -1,0 +1,11 @@
+﻿session_id,session_position,session_length,track_id_clean,skip_1,skip_2,skip_3,not_skipped,context_switch,no_pause_before_play,short_pause_before_play,long_pause_before_play,hist_user_behavior_n_seekfwd,hist_user_behavior_n_seekback,hist_user_behavior_is_shuffle,hour_of_day,date,premium,context_type,hist_user_behavior_reason_start,hist_user_behavior_reason_end
+0_00006c31-e480-4e08-89d8-0d2ca3a09756,1,10,t12345,FALSE,FALSE,TRUE,FALSE,0,0,0,0,1,0,TRUE,1,15/07/2018,FALSE,catalog,trackdone,endplay
+0_00006c31-e480-4e08-89d8-0d2ca3a09756,2,10,t12354,FALSE,TRUE,TRUE,FALSE,1,1,0,0,0,0,TRUE,1,15/07/2018,FALSE,catalog,appload,fwdbtn
+0_00006c31-e480-4e08-89d8-0d2ca3a09756,3,10,t12346,FALSE,FALSE,TRUE,FALSE,0,1,0,0,0,0,TRUE,1,15/07/2018,FALSE,catalog,fwdbtn,endplay
+0_00006c31-e480-4e08-89d8-0d2ca3a09756,4,10,t12353,FALSE,FALSE,FALSE,TRUE,1,1,0,0,0,0,TRUE,1,15/07/2018,FALSE,catalog,appload,trackdone
+0_00006c31-e480-4e08-89d8-0d2ca3a09756,5,10,t12347,FALSE,FALSE,FALSE,TRUE,0,0,0,1,0,0,TRUE,2,15/07/2018,FALSE,catalog,trackdone,trackdone
+0_0000d612-ee8a-496c-822a-7470023833c7,1,16,t12352,FALSE,TRUE,TRUE,FALSE,0,0,0,0,0,1,FALSE,15,15/07/2018,TRUE,personalized_playlist,trackdone,logout
+0_0000d612-ee8a-496c-822a-7470023833c7,2,16,t12348,FALSE,FALSE,TRUE,FALSE,0,0,1,1,1,0,FALSE,15,15/07/2018,TRUE,personalized_playlist,appload,trackdone
+0_0000d612-ee8a-496c-822a-7470023833c7,3,16,t12351,FALSE,FALSE,FALSE,TRUE,0,1,0,0,0,0,FALSE,15,15/07/2018,TRUE,personalized_playlist,trackdone,trackdone
+0_0000d612-ee8a-496c-822a-7470023833c7,4,16,t12349,FALSE,TRUE,TRUE,TRUE,0,1,0,0,0,0,FALSE,15,15/07/2018,TRUE,personalized_playlist,trackdone,trackdone
+0_0000d612-ee8a-496c-822a-7470023833c7,5,16,t12350,FALSE,FALSE,FALSE,TRUE,0,1,0,0,0,0,FALSE,15,15/07/2018,TRUE,personalized_playlist,trackdone,trackdone

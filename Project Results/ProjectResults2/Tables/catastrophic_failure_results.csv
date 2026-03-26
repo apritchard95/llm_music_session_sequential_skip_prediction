@@ -1,0 +1,4 @@
+Model,exp1_zero_shot,exp1_one_shot,exp2_zero_shot,exp2_one_shot,exp3_zero_shot,exp3_one_shot,exp4_zero_shot,exp4_one_shot,exp5_zero_shot,exp5_one_shot
+Llama 3.0,0.0,0.0,0.0,0.0,0.0,0.0,6.67,0.0,4.0,0.0
+Llama 3.1,0.0,0.0,0.0,0.0,1.33,0.0,2.0,0.0,0.67,0.0
+Gemini,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0

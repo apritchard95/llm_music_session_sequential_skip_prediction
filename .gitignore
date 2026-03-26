@@ -1,0 +1,42 @@
+# API keys and credentials - never commit these
+.env
+Langchain API Key.txt
+*api_key*
+*API_key*
+
+# Dissertation documents, presentations, speeches
+*.docx
+*.pdf
+*.pptx
+*.mp4
+
+# Redundant / personal notes
+To Do.txt
+Two AI Generated LinkedIn Posts.txt
+"How the programme works - Flowchart.txt"
+"Prompting for Skip Prediction Task.txt"
+"Music Recommender Systems Question Frameworks.txt"
+
+# Redundant archives and Excel files (CSVs are included)
+Source Code.zip
+*.xlsx
+
+# Unrelated test script
+test_code.py
+
+# Temporary Office and Windows files
+~$*
+~WRL*.tmp
+*.tmp
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db

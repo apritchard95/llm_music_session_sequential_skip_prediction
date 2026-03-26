@@ -1,0 +1,5 @@
+Model,Basic Metadata Zero-Shot,Basic Metadata One-Shot,Full Metadata Zero-Shot,Full Metadata One-Shot,exp3_zero_shot,exp3_one_shot,exp4_zero_shot,exp4_one_shot,exp5_zero_shot,exp5_one_shot,
+Dummy Classifier,52.63,52.63,52.63,52.63,52.63,52.63,52.63,52.63,52.63,52.63,Average
+Llama 3.0 8B,57.06,50.04,54.13,55.13,53.29,49.90,52.44,52.10,52.08,53.99,53.02
+Llama 3.1 8B,52.37,49.32,52.60,56.17,52.07,53.08,52.39,55.57,52.23,57.18,53.30
+Gemini 1.5 Flash,68.35,66.88,67.88,65.37,66.03,62.93,67.26,61.98,66.22,59.43,65.23

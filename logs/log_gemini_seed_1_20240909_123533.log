@@ -1,0 +1,4 @@
+2024-09-09 12:35:33,908 - INFO - Logging started for model: gemini with seed: 1
+2024-09-09 12:35:33,908 - INFO - Using model: gemini with seed: 1
+2024-09-09 12:36:23,054 - INFO - Data loaded for model gemini, and seed 1
+2024-09-09 12:36:23,264 - INFO - Model gemini initialized on device cpu
